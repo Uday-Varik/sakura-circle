@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakura Circle — Your Magical Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="cursor-dot"></div>
+  <canvas id="star-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="logo"><span class="logo-star">✦</span> Sakura Circle</div>
+      <div class="nav-links" id="nav-links">
+        <a href="#how">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#referral">Referral</a>
+        <a href="#pricing" class="nav-cta">Join Free ✦</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Founding Member spots are limited — lock in $6.99/mo forever
+        </div>
+        <h1>Your Magical<br><span class="gradient-text">Circle Awaits</span></h1>
+        <p class="hero-p">
+          Sakura Circle is a warm, thriving community for people who want to grow, connect, and create — together. Start with 30 days of full access. No credit card. No catch.
+        </p>
+        <div class="hero-btns">
+          <a href="#pricing" class="btn-primary">Start Free — 30 Days Full Access</a>
+          <a href="#how" class="btn-ghost">How it works ↓</a>
+        </div>
+        <div class="hero-pills">
+          <span class="pill">✦ No credit card</span>
+          <span class="pill">✦ Cancel anytime</span>
+          <span class="pill">✦ Instant full access</span>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="art-glow"></div>
+        <!-- Magical Girl SVG -->
+        <svg class="magical-girl-svg" viewBox="0 0 320 430" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shadow -->
+          <ellipse cx="160" cy="415" rx="70" ry="13" fill="rgba(232,121,249,0.18)"/>
+
+          <!-- Hair back -->
+          <path d="M78,118 Q42,185 36,285 Q62,314 92,322 Q72,255 88,182 Q88,150 78,118" fill="#d946ef"/>
+          <path d="M242,118 Q278,185 284,285 Q258,314 228,322 Q248,255 232,182 Q232,150 242,118" fill="#d946ef"/>
+
+          <!-- Dress body -->
+          <path d="M107,198 Q88,244 83,316 Q110,336 160,341 Q210,336 237,316 Q232,244 213,198 Z" fill="#f0abfc"/>
+          <path d="M88,288 Q112,300 160,306 Q208,300 232,288 Q216,310 160,318 Q104,310 88,288" fill="#e879f9" opacity="0.45"/>
+          <path d="M83,316 Q110,336 160,341 Q210,336 237,316" fill="#c084fc" opacity="0.35"/>
+
+          <!-- Neck -->
+          <rect x="147" y="175" width="26" height="28" rx="13" fill="#fde8d0"/>
+
+          <!-- Collar -->
+          <path d="M118,198 Q140,210 160,204 Q180,210 202,198 Q186,218 160,213 Q134,218 118,198" fill="#c084fc"/>
+
+          <!-- Head -->
+          <circle cx="160" cy="122" r="60" fill="#fde8d0"/>
+
+          <!-- Hair top -->
+          <path d="M100,112 Q107,64 160,58 Q213,64 220,112 Q196,86 160,84 Q124,86 100,112" fill="#d946ef"/>
+          <path d="M100,112 Q85,127 87,150 Q93,107 100,112" fill="#d946ef"/>
+          <path d="M220,112 Q235,127 233,150 Q227,107 220,112" fill="#d946ef"/>
+          <!-- Bangs -->
+          <path d="M106,97 Q116,110 114,122 Q107,107 106,97" fill="#a21caf"/>
+          <path d="M143,80 Q147,93 144,102 Q141,89 143,80" fill="#a21caf"/>
+          <path d="M177,80 Q181,93 178,102 Q175,89 177,80" fill="#a21caf"/>
+          <path d="M212,95 Q206,108 207,118 Q212,105 212,95" fill="#a21caf"/>
+          <!-- Hair highlights -->
+          <path d="M118,76 Q122,90 120,97" stroke="rgba(255,255,255,0.38)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M154,65 Q156,79 154,87" stroke="rgba(255,255,255,0.35)" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+          <!-- Left eye -->
+          <ellipse cx="134" cy="124" rx="15" ry="17" fill="#1a0533"/>
+          <ellipse cx="134" cy="121" rx="10" ry="12" fill="#7c3aed"/>
+          <ellipse cx="134" cy="120" rx="6.5" ry="8" fill="#4c1d95"/>
+          <circle cx="139" cy="117" r="3.8" fill="white"/>
+          <circle cx="130" cy="123" r="1.6" fill="white" opacity="0.65"/>
+          <line x1="119" y1="113" x2="116" y2="109" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="124" y1="110" x2="122" y2="106" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="130" y1="108" x2="129" y2="104" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="135" y1="107" x2="135" y2="103" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="140" y1="108" x2="141" y2="104" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="146" y1="111" x2="148" y2="107" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="150" y1="115" x2="153" y2="112" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+
+          <!-- Right eye -->
+          <ellipse cx="186" cy="124" rx="15" ry="17" fill="#1a0533"/>
+          <ellipse cx="186" cy="121" rx="10" ry="12" fill="#7c3aed"/>
+          <ellipse cx="186" cy="120" rx="6.5" ry="8" fill="#4c1d95"/>
+          <circle cx="191" cy="117" r="3.8" fill="white"/>
+          <circle cx="182" cy="123" r="1.6" fill="white" opacity="0.65"/>
+          <line x1="171" y1="113" x2="168" y2="109" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="176" y1="110" x2="174" y2="106" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="182" y1="108" x2="181" y2="104" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="187" y1="107" x2="187" y2="103" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="192" y1="108" x2="193" y2="104" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="198" y1="111" x2="200" y2="107" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="202" y1="115" x2="205" y2="112" stroke="#1a0533" stroke-width="1.5" stroke-linecap="round"/>
+
+          <!-- Eyebrows -->
+          <path d="M121,107 Q134,103 148,107" stroke="#a21caf" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M173,107 Q186,103 200,107" stroke="#a21caf" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+          <!-- Nose -->
+          <path d="M157,139 Q160,143 163,139" stroke="#d4a0a0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+          <!-- Mouth -->
+          <path d="M146,153 Q160,164 174,153" stroke="#e88080" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M151,154 Q160,161 169,154" fill="#f472b6" opacity="0.28"/>
+
+          <!-- Blush -->
+          <ellipse cx="115" cy="144" rx="13" ry="7" fill="#ffb3c1" opacity="0.42"/>
+          <ellipse cx="205" cy="144" rx="13" ry="7" fill="#ffb3c1" opacity="0.42"/>
+
+          <!-- Left arm -->
+          <path d="M110,204 Q83,222 76,254" stroke="#fde8d0" stroke-width="20" stroke-linecap="round" fill="none"/>
+          <circle cx="76" cy="258" r="12" fill="#fde8d0"/>
+
+          <!-- Right arm (wand hand) -->
+          <path d="M210,204 Q237,218 252,242" stroke="#fde8d0" stroke-width="20" stroke-linecap="round" fill="none"/>
+          <circle cx="255" cy="246" r="11" fill="#fde8d0"/>
+
+          <!-- Wand stick -->
+          <line x1="255" y1="242" x2="290" y2="166" stroke="#c084fc" stroke-width="5.5" stroke-linecap="round"/>
+          <line x1="255" y1="242" x2="290" y2="166" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-linecap="round"/>
+
+          <!-- Wand star -->
+          <g transform="translate(290,152)">
+            <polygon points="0,-20 4.7,-6.5 19,-6.2 7.8,3.7 12.5,17.2 0,8.7 -12.5,17.2 -7.8,3.7 -19,-6.2 -4.7,-6.5" fill="#ffd700"/>
+            <polygon points="0,-13 3,-4.2 12.3,-4 5,2.4 8.1,11.2 0,5.6 -8.1,11.2 -5,2.4 -12.3,-4 -3,-4.2" fill="#fffde0"/>
+          </g>
+          <circle cx="290" cy="152" r="24" fill="rgba(255,215,0,0.12)"/>
+          <circle cx="290" cy="152" r="14" fill="rgba(255,215,0,0.08)"/>
+          <!-- Wand sparkle trails -->
+          <circle cx="278" cy="173" r="3" fill="rgba(255,215,0,0.5)"/>
+          <circle cx="268" cy="192" r="2" fill="rgba(255,215,0,0.3)"/>
+          <circle cx="296" cy="168" r="2.5" fill="rgba(232,121,249,0.5)"/>
+
+          <!-- Dress bow -->
+          <path d="M143,202 Q160,191 177,202 Q166,212 160,209 Q154,212 143,202" fill="#f472b6"/>
+          <circle cx="160" cy="203" r="5.5" fill="#e879f9"/>
+
+          <!-- Dress details -->
+          <text x="102" y="262" font-size="9" fill="rgba(255,255,255,0.42)">✦</text>
+          <text x="196" y="258" font-size="7" fill="rgba(255,255,255,0.42)">✧</text>
+          <text x="150" y="284" font-size="8" fill="rgba(255,255,255,0.35)">✦</text>
+
+          <!-- Legs -->
+          <rect x="132" y="332" width="23" height="68" rx="11.5" fill="#fde8d0"/>
+          <rect x="165" y="332" width="23" height="68" rx="11.5" fill="#fde8d0"/>
+          <!-- Socks -->
+          <rect x="132" y="366" width="23" height="34" rx="0" fill="white" opacity="0.88"/>
+          <rect x="165" y="366" width="23" height="34" rx="0" fill="white" opacity="0.88"/>
+          <!-- Shoes -->
+          <ellipse cx="143.5" cy="400" rx="17" ry="10" fill="#7c3aed"/>
+          <ellipse cx="176.5" cy="400" rx="17" ry="10" fill="#7c3aed"/>
+          <ellipse cx="138" cy="394" rx="5.5" ry="3.2" fill="rgba(255,255,255,0.28)"/>
+          <ellipse cx="171" cy="394" rx="5.5" ry="3.2" fill="rgba(255,255,255,0.28)"/>
+
+          <!-- Floating sparkles -->
+          <g class="sf1"><text x="28" y="82" font-size="24" fill="#ffd700" opacity="0.9">✦</text></g>
+          <g class="sf2"><text x="268" y="72" font-size="17" fill="#f472b6" opacity="0.85">✦</text></g>
+          <g class="sf3"><text x="12" y="205" font-size="13" fill="#c084fc" opacity="0.7">✧</text></g>
+          <g class="sf4"><text x="290" y="240" font-size="19" fill="#ffd700" opacity="0.72">✦</text></g>
+          <g class="sf5"><text x="38" y="335" font-size="11" fill="#f472b6" opacity="0.6">✧</text></g>
+          <g class="sf6"><text x="274" y="358" font-size="13" fill="#c084fc" opacity="0.62">✦</text></g>
+          <g class="sf7"><text x="55" y="155" font-size="9" fill="#ffd700" opacity="0.55">✦</text></g>
+          <g class="sf8"><text x="252" y="145" font-size="10" fill="#f472b6" opacity="0.55">✧</text></g>
+        </svg>
+      </div>
+    </div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how">
+    <div class="section-inner">
+      <div class="section-tag">✦ The Magic</div>
+      <h2>How It Works</h2>
+      <p class="section-sub">A trial that respects your time. No tricks — just a genuine 30-day experience.</p>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-icon">🌸</div>
+          <div class="step-num">01</div>
+          <h3>Join Free</h3>
+          <p>Sign up with just your email. Get instant, full access to everything — community, events, and the entire resource library. No credit card, ever.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step reveal">
+          <div class="step-icon">✨</div>
+          <div class="step-num">02</div>
+          <h3>30 Days of Magic</h3>
+          <p>Experience Sakura Circle in full for a whole month. Attend live events, connect with members, and explore every corner of the community.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step reveal">
+          <div class="step-icon">💫</div>
+          <div class="step-num">03</div>
+          <h3>Choose Your Path</h3>
+          <p>After 30 days, upgrade to keep full access — or stay free with a limited tier. Your choice, always. No surprise charges.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step reveal">
+          <div class="step-icon">🌟</div>
+          <div class="step-num">04</div>
+          <h3>Grow Together</h3>
+          <p>As the circle grows, prices rise. Join as a Founding Member now and lock in the lowest price forever — a permanent thank-you for believing early.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="section-inner">
+      <div class="section-tag">✦ Membership</div>
+      <h2>Pick Your Path</h2>
+      <p class="section-sub">Join now while Founding Member spots are still open.</p>
+      <div class="toggle-row">
+        <span class="toggle-label">Monthly</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="billing-toggle" />
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label">Annual <span class="save-badge">Save 26%</span></span>
+      </div>
+      <div class="pricing-cards">
+
+        <!-- Free -->
+        <div class="pricing-card reveal">
+          <div class="card-top">
+            <div class="card-tier">Free</div>
+            <div class="card-price-wrap">
+              <span class="card-price">$0</span>
+              <span class="card-freq">/forever</span>
+            </div>
+            <p class="card-desc">Get a real taste of the magic. Limited access continues after your 30-day trial ends.</p>
+          </div>
+          <ul class="card-features">
+            <li class="has">✦ 30-day full access trial</li>
+            <li class="has">✦ Community feed (read-only after trial)</li>
+            <li class="has">✦ 1 event/month</li>
+            <li class="not">✗ Full community & channels</li>
+            <li class="not">✗ Resources library</li>
+            <li class="not">✗ All live events</li>
+          </ul>
+          <a href="#" class="btn-card-ghost">Start Free Trial</a>
+        </div>
+
+        <!-- Founding Member — featured -->
+        <div class="pricing-card featured reveal">
+          <div class="featured-ribbon">★ Best Value — Limited Spots</div>
+          <div class="card-top">
+            <div class="card-tier">Founding Member</div>
+            <div class="card-price-wrap">
+              <span class="card-price" id="founding-price">$6.99</span>
+              <span class="card-freq">/mo</span>
+            </div>
+            <div class="annual-subtext" id="founding-annual" style="display:none">$69/yr · billed annually</div>
+            <div class="lock-badge">🔒 Locked forever — never increases</div>
+            <p class="card-desc">Same as Member, at a price that stays frozen while public pricing rises. Your reward for believing early.</p>
+          </div>
+          <ul class="card-features">
+            <li class="has">✦ Full community access</li>
+            <li class="has">✦ All events (live + recorded)</li>
+            <li class="has">✦ Complete resources library</li>
+            <li class="has">✦ Member-only channels</li>
+            <li class="has">✦ Early access to new features</li>
+            <li class="has">✦ Founding Member badge forever</li>
+          </ul>
+          <a href="#" class="btn-card-primary">Join as Founding Member ✦</a>
+          <p class="card-note">Price locks in the moment you join. No surprises. Ever.</p>
+        </div>
+
+        <!-- Member -->
+        <div class="pricing-card reveal">
+          <div class="card-top">
+            <div class="card-tier">Member</div>
+            <div class="card-price-wrap">
+              <span class="card-price" id="member-price">$9.99</span>
+              <span class="card-freq">/mo</span>
+            </div>
+            <div class="annual-subtext" id="member-annual" style="display:none">$89/yr · billed annually</div>
+            <p class="card-desc">Full community access with all features, at the standard public price.</p>
+          </div>
+          <ul class="card-features">
+            <li class="has">✦ Full community access</li>
+            <li class="has">✦ All events (live + recorded)</li>
+            <li class="has">✦ Complete resources library</li>
+            <li class="has">✦ Member-only channels</li>
+            <li class="has">✦ Early access to new features</li>
+            <li class="not">✗ Founding Member badge</li>
+          </ul>
+          <a href="#" class="btn-card-outline">Join as Member</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERRAL -->
+  <section class="referral" id="referral">
+    <div class="section-inner">
+      <div class="referral-inner">
+        <div class="referral-text">
+          <div class="section-tag">✦ Spread the Magic</div>
+          <h2>Give a Month,<br>Get a Month</h2>
+          <p>When you invite a friend and they join, you both get one month free — automatically. The more magic you share, the more you receive.</p>
+          <div class="referral-steps">
+            <div class="ref-step reveal">
+              <span class="ref-num">1</span>
+              <span>Get your unique invite link from your member dashboard</span>
+            </div>
+            <div class="ref-step reveal">
+              <span class="ref-num">2</span>
+              <span>Share with a friend who would love this community</span>
+            </div>
+            <div class="ref-step reveal">
+              <span class="ref-num">3</span>
+              <span>They join → you both earn a free month, automatically</span>
+            </div>
+          </div>
+          <a href="#pricing" class="btn-primary" style="margin-top: 2rem; display: inline-flex;">Join & Start Sharing ✦</a>
+        </div>
+        <div class="referral-visual">
+          <div class="ref-card reveal">
+            <div class="ref-avatar">🌸</div>
+            <div class="ref-name">You</div>
+            <div class="ref-reward">+1 Month Free</div>
+          </div>
+          <div class="ref-connect">
+            <div class="ref-line"></div>
+            <div class="ref-heart">✦ Share ✦</div>
+            <div class="ref-line"></div>
+          </div>
+          <div class="ref-card reveal">
+            <div class="ref-avatar">✨</div>
+            <div class="ref-name">Your Friend</div>
+            <div class="ref-reward">+1 Month Free</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-inner">
+      <div class="section-tag">✦ Questions</div>
+      <h2>Frequently Asked</h2>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q">What happens after my 30-day trial? <span class="faq-icon">+</span></button>
+          <div class="faq-a">After 30 days, you automatically move to the limited free tier — nothing is charged. If you loved the full experience (and we think you will), you can upgrade to Member or Founding Member from your dashboard at any time.</div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Why is Founding Member cheaper? <span class="faq-icon">+</span></button>
+          <div class="faq-a">You're helping build this from the ground up — and that matters. Founding Members lock in $6.99/mo forever. When public pricing rises to $12.99–$14.99 after we hit 200+ members, you'll always keep your founding rate as a permanent thank-you.</div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Can I cancel anytime? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Yes, always. No contracts, no cancellation fees. Cancel from your dashboard in one click. If you cancel a Founding Member plan and want to re-join later, you'll rejoin at the public price — so it's worth staying!</div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">What's actually inside the community? <span class="faq-icon">+</span></button>
+          <div class="faq-a">Full members get access to live and recorded events, a growing resource library, dedicated member channels, direct access to the creator team, and early access to every new feature as we build them — together.</div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Is the annual plan worth it? <span class="faq-icon">+</span></button>
+          <div class="faq-a">If you plan to stay for more than 9 months — absolutely yes. The annual Member plan is $89/yr (vs $119.88/yr monthly), saving you over 26%. Annual Founding Members save even more at $69/yr.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="section-inner text-center">
+      <div class="cta-sparkles">✦ ✧ ✦ ✧ ✦</div>
+      <h2>Ready to Find Your Circle?</h2>
+      <p>Join free today. No card required. 30 days of full access.<br>Founding Member spots are closing soon.</p>
+      <a href="#pricing" class="btn-primary btn-large">Start Your Free Trial ✦</a>
+      <div class="hero-pills" style="justify-content:center; margin-top:1.5rem;">
+        <span class="pill">✦ 30 days free</span>
+        <span class="pill">✦ No credit card</span>
+        <span class="pill">✦ Cancel anytime</span>
+      </div>
+    </div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><span class="logo-star">✦</span> Sakura Circle</div>
+      <p class="footer-tagline">A magical community for growth, connection & creativity.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+      <p class="footer-copy">© 2025 Sakura Circle. Made with ✦ and a little magic.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
