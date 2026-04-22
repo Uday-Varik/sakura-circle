@@ -528,6 +528,13 @@ section h2 {
 
 .card-freq { color: var(--text-muted); font-weight: 600; }
 
+.trial-note {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+
 .annual-subtext {
   font-size: 0.77rem;
   color: var(--pink);
